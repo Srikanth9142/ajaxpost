@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index page</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+</head>
+<body>
+	{% csrf_token %} 
+	<h3>This is for testing ajax post request</h3>
+	<p>Upload your profile photo and fill name and description</p>
+	<form method="POST" enctype="multipart/form-data" id="myform">
+		
+		<input type="file" name="file" id="myfile">
+		<input type="text" name="name" id="name">
+		<input type="text" name="description" id="description">
+		<button type="submit">Submit</button>
+	</form>
+	
+	<script type="text/javascript" src="{% static 'script.js' %}"></script>
+</body>
+</html>
